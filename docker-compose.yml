@@ -1,0 +1,30 @@
+version: "3"
+services:
+  web:
+    # replace username/repo:tag with your name and image details
+    image: tom/app:latest
+    deploy:
+      replicas: 5
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "8080:8080"
+    networks:
+      - webnet
+networks:
+  webnet:
+#    docker service create --name hello --replicas=5 -p 8080:8080 tomek371240/app
+#  docker service describe hello
+# docker service ps hello
+#http://192.168.99.1:8080/get
+#  docker service ps
+
+#removing node
+#https://docs.docker.com/v17.09/engine/swarm/manage-nodes/#update-a-node
+
+#java install and uninsall
+#https://novicestuffs.wordpress.com/2017/04/25/how-to-uninstall-java-from-linux/
+#https://www.linuxuprising.com/2019/01/how-to-install-openjdk-11-in-ubuntu.html
+
+#spring-cloud-docker
+#https://github.com/binblee/springcloud-swarm/blob/master/compose/all-in-one.yml
